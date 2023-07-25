@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <a href="../home.html">Home<br></a>
+  <title>Document</title>
+  <script>
+    
+var peso = parseFloat(prompt("Digite o peso em kg:"));
+var altura = parseFloat(prompt("Digite a altura em metros:"));
+
+   
+var imc = peso / (altura * altura);
+
+
+var abaixoDoPeso = (imc < 18.5);
+var pesoNormal = (imc >= 18.5 && imc < 25);
+var sobrepeso = (imc >= 25 && imc < 30);
+var obesidade = (imc >= 30);
+
+
+document.write("Altura: " + altura + " metros<br>");
+document.write("Peso: " + peso + " kg<br><br>");
+document.write("Abaixo do peso? " + abaixoDoPeso + "<br>");
+document.write("Peso normal? " + pesoNormal + "<br>");
+document.write("Sobrepeso? " + sobrepeso + "<br>");
+document.write("Obesidade? " + obesidade + "<br>");
+
+  </script>
+</head>
+<body>
+
+  <p>
+
+    "O Índice de Massa Corporal (IMC) é uma medida simples e importante para avaliar a relação entre o peso e a altura de uma pessoa. Esse cálculo é amplamente utilizado como uma ferramenta para identificar se uma pessoa está dentro de um peso considerado saudável.<br><br>
+    
+    O cálculo do IMC é feito dividindo o peso (em quilogramas) pela altura ao quadrado (em metros). O resultado obtido é então comparado com faixas de valores pré-estabelecidas pela Organização Mundial da Saúde (OMS) para determinar se o indivíduo está abaixo do peso, dentro do peso saudável, com sobrepeso ou obesidade.<br><br>
+    
+    É importante ressaltar que o IMC é apenas uma referência inicial e não leva em consideração outros fatores importantes, como a distribuição da gordura corporal ou a composição muscular. Por isso, é sempre recomendado consultar um profissional de saúde para uma avaliação mais completa e individualizada.<br><br>
+    
+    Cuidar da saúde é fundamental, e o cálculo do IMC pode ser uma ferramenta útil para incentivar hábitos mais saudáveis e tomar decisões positivas em relação ao bem-estar e qualidade de vida."</p>
+ 
+</body>
+</html>

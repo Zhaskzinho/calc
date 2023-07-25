@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <a href="../home.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Calculadora Aritmética</h1>
+  <label for="numero1">Número 1:</label>
+  <input type="number" id="numero1" step="1">
+  <br>
+  <label for="numero2">Número 2:</label>
+  <input type="number" id="numero2" step="1">
+  <br>
+  <label for="operacao">Operação:</label>
+  <select id="operacao">
+    <option value="+">Adição</option>
+    <option value="-">Subtração</option>
+    <option value="*">Multiplicação</option>
+    <option value="/">Divisão</option>
+    <option value="sair">Sair</option>
+  </select>
+  <br>
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcular() {
+      var numero1 = parseInt(document.getElementById("numero1").value);
+      var numero2 = parseInt(document.getElementById("numero2").value);
+      var operacao = document.getElementById("operacao").value;
+
+      if (isNaN(numero1) || isNaN(numero2)) {
+        alert("Por favor, insira números inteiros válidos.");
+        return;
+      }
+
+      if (operacao === "sair") {
+        alert("Programa encerrado.");
+        return;
+      }
+
+      var resultado;
+
+      switch (operacao) {
+        case "+":
+          resultado = numero1 + numero2;
+          break;
+        case "-":
+          resultado = numero1 - numero2;
+          break;
+        case "*":
+          resultado = numero1 * numero2;
+          break;
+        case "/":
+          if (numero2 === 0) {
+            alert("Erro: Divisão por zero não é permitida.");
+            return;
+          }
+          resultado = numero1 / numero2;
+          break;
+        default:
+          alert("Por favor, escolha uma operação válida ou 'sair' para encerrar o programa.");
+          return;
+      }
+
+      var resultadoElement = document.getElementById("resultado");
+      resultadoElement.textContent = "Resultado: " + resultado;
+    }
+  </script>
+
+  <p><h1>Explore a Matemática em Ação!</h1>
+
+    Você está prestes a embarcar em uma jornada emocionante pelos mistérios dos números! Com a nossa calculadora online, você poderá desvendar as quatro operações básicas da matemática - adição, subtração, multiplicação e divisão - entre dois números de forma rápida e eficiente.<br><br>
+    
+    Adicione e some valores para obter resultados surpreendentes, subtraia e descubra as diferenças, multiplique e veja quantas vezes um número se repete, ou divida e compartilhe proporções incríveis. Seu poder matemático está prestes a ser potencializado!<br><br>
+    
+    Não importa se você é um estudante curioso ou um profissional em busca de soluções rápidas, nossa calculadora está pronta para te acompanhar em cada passo. Então, desafie-se, explore possibilidades e desvende os enigmas matemáticos com um simples toque.<br><br>
+    
+    Aventure-se na matemática e descubra como as operações básicas podem abrir portas para um universo de conhecimento e aplicação. Vamos juntos calcular, resolver e explorar os fascinantes números!<br><br>
+    
+    Preparado para essa incrível jornada? Vamos lá, a calculadora está apenas a um clique de distância. Seja bem-vindo ao mundo da Matemática em Ação!<br><br>
+    
+    Pronto para calcular? Comece agora mesmo e divirta-se explorando as operações básicas da matemática!</p>
+</body>
+</html>

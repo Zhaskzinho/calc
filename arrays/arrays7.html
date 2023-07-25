@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <a href="../home.html">Home<br></a>
+    
+  <title>Document</title>
+  <script>
+    function calcularMedia() {
+      var notas = [];
+
+      
+      for (var i = 0; i < 10; i++) {
+        var nota = prompt("Digite a nota do aluno " + (i + 1) + ":");
+        notas.push(parseFloat(nota));
+      }
+
+     
+      var soma = 0;
+      for (var i = 0; i < notas.length; i++) {
+        soma += notas[i];
+      }
+      var media = soma / notas.length;
+
+     
+      var resultado = document.getElementById("resultado");
+      resultado.textContent = "A média das notas é: " + media.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Cálculo da Média das Notas</h1>
+
+  <button onclick="calcularMedia()">Calcular Média</button>
+
+  <p id="resultado"></p>
+
+  <p><h1>Calculando as Médias dos Alunos</h1>
+
+    Descubra o segredo por trás das notas dos alunos! Aqui, você encontrará uma poderosa ferramenta para calcular as médias de suas avaliações de forma rápida e fácil.<br><br>
+    
+    Chega de complicação na hora de calcular as médias. Com nossa calculadora, basta inserir as notas de cada aluno e, em questão de segundos, você terá a média de todos eles, pronta para análise.<br><br>
+    
+    Não importa se você é um professor, estudante ou responsável, nossa calculadora de médias é a solução ideal para acompanhar o desempenho acadêmico. Transforme as notas em médias e obtenha uma visão clara do progresso dos alunos.<br><br>
+    
+    Simplifique sua rotina escolar e tome decisões mais informadas com o cálculo preciso das médias dos alunos. Experimente agora mesmo e desvende os resultados dessa ferramenta indispensável!"</p><br><br>
+</body>
+</html>

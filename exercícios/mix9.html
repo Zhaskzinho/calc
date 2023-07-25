@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <a href="../home.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Calculadora de Limite de Crédito</h1>
+
+  <label for="conta">Número da Conta:</label>
+  <input type="number" id="conta" step="1">
+  <br>
+  <label for="saldoInicial">Saldo Inicial do Mês:</label>
+  <input type="number" id="saldoInicial" step="1">
+  <br>
+  <label for="totalDespesas">Total de Despesas do Mês:</label>
+  <input type="number" id="totalDespesas" step="1">
+  <br>
+  <label for="totalCreditos">Total de Créditos do Mês:</label>
+  <input type="number" id="totalCreditos" step="1">
+  <br>
+  <label for="limiteCredito">Limite de Crédito Autorizado:</label>
+  <input type="number" id="limiteCredito" step="1">
+  <br>
+  <button onclick="verificarLimiteCredito()">Verificar Limite de Crédito</button>
+  <br>
+  <p id="resultado"></p>
+
+  <script>
+    function verificarLimiteCredito() {
+      var numeroConta = parseInt(document.getElementById("conta").value);
+      var saldoInicial = parseInt(document.getElementById("saldoInicial").value);
+      var totalDespesas = parseInt(document.getElementById("totalDespesas").value);
+      var totalCreditos = parseInt(document.getElementById("totalCreditos").value);
+      var limiteCredito = parseInt(document.getElementById("limiteCredito").value);
+
+      if (isNaN(numeroConta) || isNaN(saldoInicial) || isNaN(totalDespesas) || isNaN(totalCreditos) || isNaN(limiteCredito)) {
+        alert("Por favor, insira números inteiros válidos.");
+        return;
+      }
+
+      var novoSaldo = saldoInicial + totalDespesas - totalCreditos;
+
+      var resultadoElement = document.getElementById("resultado");
+      resultadoElement.innerHTML = "Número da Conta: " + numeroConta + "<br>";
+      resultadoElement.innerHTML += "Novo Saldo: R$" + novoSaldo.toFixed(2) + "<br>";
+
+      if (novoSaldo > limiteCredito) {
+        resultadoElement.innerHTML += "Limite de crédito excedido";
+      }
+    }
+  </script>
+
+  <p><h1>Descubra seu Limite de Crédito com Facilidade!</h1>
+
+    Com nossa Calculadora de Limite de Crédito, você pode determinar rapidamente o valor máximo que pode ser concedido a você, com base em sua renda mensal, histórico de crédito e outras informações relevantes. Esqueça as complicações e estimativas incertas, pois nossa ferramenta simplifica todo o processo.<br><br>
+    
+    Saiba exatamente quanto crédito está ao seu alcance, para realizar seus projetos e sonhos com segurança e tranquilidade. Faça o cálculo em poucos passos e tome decisões financeiras mais conscientes. Afinal, a sua tranquilidade é o nosso objetivo!<br><br>
+    
+    Experimente agora mesmo a Calculadora de Limite de Crédito e descubra o poder de ter todas as informações necessárias ao seu alcance. Conte conosco para ajudar a construir o seu futuro financeiro com responsabilidade e confiança!</p><br><br>
+</body>
+</html>

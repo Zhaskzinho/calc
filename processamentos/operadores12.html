@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+    <a href="../home.html">Home<br></a>
+
+  <title>Document</title>
+  <script>
+    function converterParaRadianos() {
+      
+      var graus = parseFloat(document.getElementById("valor_graus").value);
+      
+      var radianos = (graus * Math.PI) / 180;
+
+      document.getElementById("resultado").innerHTML = "O valor em radianos é: " + radianos;
+    }
+  </script>
+</head>
+<body>
+  <h1>Conversor de Graus para Radianos</h1>
+
+  <label for="valor_graus">Valor em graus:</label>
+  <input type="number" id="valor_graus" />
+
+  <button onclick="converterParaRadianos()">Converter</button>
+
+  <p id="resultado"></p>
+
+  <p><h1>Convertendo Graus para Radianos:</h1>
+
+    Você já se perguntou como converter graus em radianos? A conversão entre essas duas unidades de medida é essencial em cálculos trigonométricos e em muitos problemas de matemática e física.<br><br>
+    
+    Para realizar a conversão, lembre-se de que um círculo completo possui 360 graus ou 2π radianos. Portanto, para converter graus para radianos, você pode usar a seguinte fórmula simples:<br><br>
+    
+    Radianos = (Graus × π) / 180<br><br>
+    
+    Aqui, "Graus" representa o valor em graus que você deseja converter e "π" (pi) é uma constante matemática aproximadamente igual a 3.14159.<br><br>
+    
+    Então, da próxima vez que precisar trabalhar com medidas de ângulos, lembre-se dessa fórmula fácil e descomplicada para converter graus em radianos e facilite suas explorações no mundo da trigonometria!</p>
+</body>
+</html>

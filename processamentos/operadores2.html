@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <a href="../home.html">Home<br></a>
+
+  <title>Document</title>
+</head>
+<body>
+
+<form id="formulario">
+  Valor 1: <input type="number" id="valor1Input"><br>
+  Valor 2: <input type="number" id="valor2Input"><br>
+  <input type="submit" value="Calcular">
+</form>
+
+<script>
+  document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var valor1 = parseInt(document.getElementById("valor1Input").value);
+    var valor2 = parseInt(document.getElementById("valor2Input").value);
+
+    var potenciacao = Math.pow(valor1, valor2);
+    var modulo = valor1 % valor2;
+
+    document.write("Potenciação: " + potenciacao + "<br>");
+    document.write("Módulo: " + modulo + "<br>");
+  });
+</script>
+
+<p><h2>Potenciação: Explorando o Poder dos Expoentes</h2>
+  
+  A potenciação é uma operação matemática fundamental que nos permite expressar um número elevado a uma determinada potência, também conhecida como expoente. Essa operação nos permite simplificar cálculos extensos e representa uma ferramenta poderosa para resolver uma variedade de problemas matemáticos.<br><br>
+  
+  O processo de potenciação é intuitivo e elegante. Quando elevamos um número à potência de outro número, estamos basicamente multiplicando o número por si mesmo várias vezes, de acordo com o valor do expoente. Por exemplo, 2 elevado a 3 (2³) significa 2 x 2 x 2, que resulta em 8. Já 4 elevado a 5 (4⁵) representa 4 x 4 x 4 x 4 x 4, que resulta em 1024.<br><br>
+  
+  A potenciação é amplamente utilizada em várias áreas da matemática, ciências naturais e engenharia. Ela desempenha um papel crucial na resolução de problemas que envolvem crescimento exponencial, como o cálculo de juros compostos em investimentos financeiros, o crescimento populacional e a decaimento radioativo.<br><br>
+  
+  <h2>Módulo: Entendendo a Magnitude e o Sinal</h2>
+  
+  O módulo é outra operação matemática importante, também conhecida como valor absoluto. O objetivo do módulo é extrair a magnitude de um número, independentemente do seu sinal (positivo ou negativo). Em outras palavras, o módulo sempre resultará em um valor não negativo.<br><br>
+  
+  Matematicamente, o módulo de um número é representado por duas barras verticais (|x|), e o resultado será sempre a distância entre o número e o zero na reta numérica. Por exemplo, o módulo de 5 é simplesmente 5 (|5| = 5), e o módulo de -7 também é 7 (|-7| = 7). O módulo de zero é zero, pois já está na origem da reta numérica (|0| = 0).<br><br>
+  
+  O conceito de módulo é aplicado em várias situações, como no cálculo de distâncias, velocidades e grandezas que não podem ser negativas, como massas e temperaturas. Além disso, o módulo é usado na resolução de equações e desigualdades envolvendo valores absolutos.<br><br>
+  
+  Entender a potenciação e o módulo nos oferece uma base sólida para lidar com problemas complexos e nos ajuda a explorar o mundo fascinante da matemática com confiança e precisão. Essas operações são valiosas ferramentas em nosso kit de habilidades matemáticas, permitindo-nos desvendar mistérios numéricos e resolver desafios que surgem em diversas áreas do conhecimento.</p><br><br>
+
+</body>
+</html>

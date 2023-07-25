@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <a href="../home.html">Home<br></a>
+
+  <title>Document</title>
+  <script>
+    function converterParaGraus() {
+      
+      var radianos = parseFloat(document.getElementById("valor_radianos").value);
+
+    
+      var graus = (radianos * 180) / Math.PI;
+
+    
+      document.getElementById("resultado").innerHTML = "O valor em graus é: " + graus;
+    }
+  </script>
+</head>
+<body>
+  <h1>Conversor de Radianos para Graus</h1>
+
+  <label for="valor_radianos">Valor em radianos:</label>
+  <input type="number" id="valor_radianos" />
+
+  <button onclick="converterParaGraus()">Converter</button>
+
+  <p id="resultado"></p>
+
+  <p><h1>Converter Radianos para Graus</h1>
+
+    Entenda como transformar ângulos em radianos para a medida em graus! Os radianos são uma unidade fundamental para medir ângulos em matemática e ciências, mas muitas vezes, precisamos expressá-los em graus para melhor compreensão e aplicação prática.<br><br>
+    
+    Nossa ferramenta de conversão é simples de usar: basta inserir o valor em radianos e obter instantaneamente o correspondente em graus. Com essa conversão rápida e precisa, você poderá trabalhar com ângulos em diferentes sistemas de medida e aplicar em diversos cálculos, facilitando suas análises e soluções matemáticas.<br><br>
+    
+    Experimente agora mesmo e torne suas operações com ângulos ainda mais versáteis e precisas. Converta radianos para graus com facilidade e desvende as possibilidades que o mundo dos ângulos tem a oferecer!</p><br><br>
+</body>
+</html>

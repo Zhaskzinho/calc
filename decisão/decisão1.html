@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <a href="../home.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Verificação de Aprovação</h1>
+  <label for="nota1">Nota 1:</label>
+  <input type="number" id="nota1" step="0.1"><br>
+  <label for="nota2">Nota 2:</label>
+  <input type="number" id="nota2" step="0.1"><br>
+  <label for="nota3">Nota 3:</label>
+  <input type="number" id="nota3" step="0.1"><br>
+  <label for="nota4">Nota 4:</label>
+  <input type="number" id="nota4" step="0.1"><br>
+  <button onclick="calcularMedia()">Calcular Média</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularMedia() {
+      var nota1 = parseFloat(document.getElementById("nota1").value);
+      var nota2 = parseFloat(document.getElementById("nota2").value);
+      var nota3 = parseFloat(document.getElementById("nota3").value);
+      var nota4 = parseFloat(document.getElementById("nota4").value);
+
+      var media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+      var resultadoElement = document.getElementById("resultado");
+
+      if (media >= 7) {
+        resultadoElement.innerHTML = "Parabéns! Você foi aprovado.<br>Nota: " + media;
+      } else {
+        resultadoElement.innerHTML = "Ainda não foi dessa vez.<br>Nota: " + media;
+      }
+    }
+  </script>
+
+  <p><h1>Bem-vindo à Verificação de Aprovação!</h1>
+
+    Aqui na Calculadora Online, estamos prontos para te ajudar a verificar se um aluno foi aprovado ou não em suas disciplinas ao longo de quatro bimestres. Basta inserir as notas obtidas pelo aluno em cada um dos bimestres e nós iremos calcular a média final para você!<br><br>
+    
+    Nossa ferramenta é simples e eficiente. Você insere as notas dos quatro bimestres e, com apenas um clique, descobre se o aluno atingiu a média necessária para ser aprovado. Caso ainda não tenha alcançado o resultado desejado, não se preocupe, nós também mostraremos o quanto falta para alcançar a aprovação.<br><br>
+    
+    Então, não perca tempo! Utilize nossa Verificação de Aprovação e garanta o sucesso acadêmico do aluno. Estamos aqui para tornar sua vida mais fácil e ajudar a construir um futuro brilhante. Boas notas e ótimos resultados estão ao seu alcance!<br><br>
+    
+    Lembre-se, a Calculadora Online está sempre pronta para te auxiliar em qualquer desafio matemático ou acadêmico. Aproveite nossas diversas funcionalidades e continue contando conosco para simplificar suas tarefas!<br><br>
+    
+    A equipe da Calculadora Online deseja muito sucesso nas avaliações e estudos do aluno. Estamos aqui para apoiá-lo em toda a sua jornada educacional. Vamos juntos rumo ao conhecimento e excelência!<br><br>
+    
+    *Para começar, insira as notas do aluno nos campos indicados e clique no botão de calcular. Em instantes, teremos o resultado!*</p>
+</body>
+</html>

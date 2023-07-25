@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+    <a href="../home.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Análise de Números</h1>
+  <label for="numeroInput">Insira um número:</label>
+  <input type="number" id="numeroInput">
+  <button onclick="adicionarNumero()">Adicionar Número</button>
+
+  <h2>Resultados:</h2>
+  <p id="positivos">Números positivos: </p>
+  <p id="negativos">Números negativos: </p>
+  <p id="zeros">Números zeros: </p>
+
+  <script>
+    var numeros = [];
+    var positivosCount = 0;
+    var negativosCount = 0;
+    var zerosCount = 0;
+
+    function adicionarNumero() {
+      var numeroInput = document.getElementById("numeroInput");
+      var numero = parseInt(numeroInput.value);
+
+      if (isNaN(numero)) {
+        alert("Por favor, insira um número válido!");
+        return;
+      }
+
+      numeros.push(numero);
+      numeroInput.value = "";
+
+      verificarNumeros();
+    }
+
+    function verificarNumeros() {
+      positivosCount = 0;
+      negativosCount = 0;
+      zerosCount = 0;
+
+      for (var i = 0; i < numeros.length; i++) {
+        var numero = numeros[i];
+
+        if (numero > 0) {
+          positivosCount++;
+        } else if (numero < 0) {
+          negativosCount++;
+        } else {
+          zerosCount++;
+        }
+      }
+
+      exibirResultados();
+    }
+
+    function exibirResultados() {
+      var positivosElement = document.getElementById("positivos");
+      var negativosElement = document.getElementById("negativos");
+      var zerosElement = document.getElementById("zeros");
+
+      positivosElement.textContent = "Números positivos: " + positivosCount;
+      negativosElement.textContent = "Números negativos: " + negativosCount;
+      zerosElement.textContent = "Números zeros: " + zerosCount;
+    }
+  </script>
+
+  <p><h1>Análise de Números: Descobrindo o Universo das Possibilidades</h1>
+
+    Os números são mais do que meras representações matemáticas; eles nos conduzem a um universo repleto de possibilidades. Em nossa jornada pela análise de números, encontramos três protagonistas cativantes: os positivos, os negativos e o intrigante zero.<br><br>
+    
+    Os números positivos são como os raios de sol em um dia ensolarado, iluminando nosso caminho rumo ao sucesso e crescimento. Eles representam quantidades maiores que zero, impulsionando-nos para frente, inspirando-nos a atingir metas e sonhos. São sinônimos de esperança e oportunidades, convidando-nos a explorar o mundo ao nosso redor com otimismo.<br><br>
+    
+    Por outro lado, os números negativos são como as sombras que acompanham nossa jornada. Embora possam parecer desafiadores à primeira vista, eles são essenciais para entender a profundidade e a complexidade da vida. Os números negativos nos ensinam lições valiosas sobre perdas e quedas, incentivando-nos a superar obstáculos com coragem e resiliência. Eles nos mostram que até mesmo nas adversidades, há espaço para crescimento e aprendizado.<br><br>
+    
+    E então, surge o número zero, um enigma fascinante. Simples em sua aparência, mas carregado de significado. O zero é o ponto de partida, o marco inicial para qualquer jornada numérica. Ele representa o vazio, mas também a potencialidade infinita. É o elo entre os positivos e os negativos, o equilíbrio entre os extremos. O zero é um convite à reflexão, lembrando-nos que mesmo quando parece que nada está acontecendo, há um universo de possibilidades aguardando para se manifestar.<br><br>
+    
+    A análise de números é uma aventura emocionante, repleta de descobertas e surpresas. Cada número possui sua história, seu papel na grande narrativa matemática. À medida que mergulhamos nesse universo numérico, desvendamos os mistérios por trás dos positivos, dos negativos e do zero, abrindo as portas para um novo entendimento sobre o mundo que nos cerca. Então, vamos embarcar juntos nesta viagem e desvendar as maravilhas dos números!</p>
+</body>
+</html>
